@@ -14,7 +14,7 @@ const App = () => {
       const data = await response.json();
       console.log(data);
 
-      const temperature = data.current.temp_c;
+      const temperature = Math.floor(data.current.temp_c);
       const description = data.current.condition.text;
 
       setCurrentWeather({ temperature,description })
