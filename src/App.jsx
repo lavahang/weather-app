@@ -21,7 +21,10 @@ const App = () => {
 
       setCurrentWeather({ temperature,description, weatherIcon })
       console.log(temperature)
-            
+
+      // combine hourly data from both forecast days
+      const combinedHourlyData = [...data.forecast.forecastday[0].hour,...data.forecast.forecastday[1].hour]
+            console.log(combinedHourlyData )
     } catch (error) {
       console.log(error)
     }
