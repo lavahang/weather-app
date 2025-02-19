@@ -8,6 +8,19 @@ import { weatherCodes } from './constant';
 
 const App = () => {
   const [currentWeather, setCurrentWeather] = useState({});
+
+  const filterHourlyForecast = (hourlyData) => {
+    const currentHour = new Date().setMinutes(0,0,0)
+    const next24Hours = currentHour + 24*60*60*1000;
+// filtering to 24 hours
+    const next24HoursData = hourlyData.filter(({time}) =>{
+      const forecastTime = new Date(time).getTime()
+      return forecastTime >= currentHour && forecastTime <= next24Hours
+    })
+    console.log(next24HoursData);
+    
+  }
+
   // Fetches weather details based on the API URL
   const getWeatherDetails = async (API_URL) => {
     try {
@@ -25,6 +38,7 @@ const App = () => {
       // combine hourly data from both forecast days
       const combinedHourlyData = [...data.forecast.forecastday[0].hour,...data.forecast.forecastday[1].hour]
             console.log(combinedHourlyData )
+            filterHourlyForecast(combinedHourlyData)
     } catch (error) {
       console.log(error)
     }
