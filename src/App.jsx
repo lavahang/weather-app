@@ -8,6 +8,7 @@ import { weatherCodes } from './constant';
 
 const App = () => {
   const [currentWeather, setCurrentWeather] = useState({});
+  const [hourlyForecasts, setHourlyForecasts] = useState([]);
 
   const filterHourlyForecast = (hourlyData) => {
     const currentHour = new Date().setMinutes(0,0,0)
@@ -18,6 +19,7 @@ const App = () => {
       return forecastTime >= currentHour && forecastTime <= next24Hours
     })
     console.log(next24HoursData);
+    setHourlyForecasts(next24HoursData);
     
   }
 
@@ -56,10 +58,11 @@ const App = () => {
           {/* Hourly weather forecast list */}
           <div className="hourly-forecast">
             <ul className="weather-list">
-             
-                <HourlyWeatherItem />
-                <HourlyWeatherItem />
-                <HourlyWeatherItem />
+             {hourlyForecasts.map((hourlyWeather) => (
+              <HourlyWeatherItem key={hourlyWeather.time_epoch} />
+             ))}
+                
+                
            
             </ul>
           </div>
