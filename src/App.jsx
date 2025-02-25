@@ -49,6 +49,7 @@ const App = () => {
   return (
     <> 
     <div className="container">
+    {/* search section */}
     <SearchSection getWeatherDetails={getWeatherDetails}/>
 
     <div className="weather-section">
