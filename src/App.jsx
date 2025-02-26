@@ -60,7 +60,7 @@ const App = () => {
           <div className="hourly-forecast">
             <ul className="weather-list">
              {hourlyForecasts.map((hourlyWeather) => (
-              <HourlyWeatherItem key={hourlyWeather.time_epoch} />
+              <HourlyWeatherItem key={hourlyWeather.time_epoch} hourlyWeather={hourlyWeather}/>
              ))}
                 
                 
