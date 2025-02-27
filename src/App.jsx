@@ -59,6 +59,7 @@ const App = () => {
           {/* Hourly weather forecast list */}
           <div className="hourly-forecast">
             <ul className="weather-list">
+              {/* sending props to hourlyweather components */}
              {hourlyForecasts.map((hourlyWeather) => (
               <HourlyWeatherItem key={hourlyWeather.time_epoch} hourlyWeather={hourlyWeather}/>
              ))}
