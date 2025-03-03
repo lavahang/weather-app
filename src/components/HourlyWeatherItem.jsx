@@ -1,3 +1,4 @@
+import { weatherCodes } from './constant';
 const HourlyWeatherItem = ({hourlyWeather}) => {
   const temperature = Math.floor(hourlyWeather.temp_c)
   const time = hourlyWeather.time
