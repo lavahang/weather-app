@@ -35,7 +35,7 @@ const App = () => {
       const weatherIcon = Object.keys(weatherCodes).find(icon =>weatherCodes[icon].includes(data.current.condition.code))
 
       setCurrentWeather({ temperature,description, weatherIcon })
-      console.log(temperature)
+      // console.log(temperature)
 
       // combine hourly data from both forecast days
       const combinedHourlyData = [...data.forecast.forecastday[0].hour,...data.forecast.forecastday[1].hour]
