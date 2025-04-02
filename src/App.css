@@ -2,4 +2,5 @@ p{
     background-color: red;
     color: aqua;
     border: 2px solid red;
+    align-items: center;
 }
