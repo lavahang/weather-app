@@ -3,4 +3,5 @@ p{
     color: aqua;
     border: 2px solid red;
     align-items: center;
+    display: contents;
 }
