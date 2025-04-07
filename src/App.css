@@ -4,4 +4,5 @@ p{
     border: 2px solid red;
     align-items: center;
     display: contents;
+    animation-delay: 2 ms;
 }
