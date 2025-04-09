@@ -5,4 +5,5 @@ p{
     align-items: center;
     display: contents;
     animation-delay: 2 ms;
+    box-sizing: border-box;
 }
