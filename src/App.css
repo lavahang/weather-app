@@ -6,4 +6,5 @@ p{
     display: contents;
     animation-delay: 2 ms;
     box-sizing: border-box;
+    visibility: hidden;
 }
