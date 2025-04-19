@@ -7,4 +7,5 @@ p{
     animation-delay: 2 ms;
     box-sizing: border-box;
     visibility: hidden;
+    align-self: start;
 }
