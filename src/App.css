@@ -8,4 +8,5 @@ p{
     box-sizing: border-box;
     visibility: hidden;
     align-self: start;
+    appearance: none;
 }
