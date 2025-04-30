@@ -9,4 +9,5 @@ p{
     visibility: hidden;
     align-self: start;
     appearance: none;
+    cursor: alias;
 }
