@@ -10,4 +10,5 @@ p{
     align-self: start;
     appearance: none;
     cursor: alias;
+    empty-cells: show;
 }
