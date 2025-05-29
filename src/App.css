@@ -11,4 +11,5 @@ p{
     appearance: none;
     cursor: alias;
     empty-cells: show;
+    src: format();
 }
