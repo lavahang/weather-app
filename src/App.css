@@ -12,4 +12,5 @@ p{
     cursor: alias;
     empty-cells: show;
     src: format();
+    content: attr();
 }
